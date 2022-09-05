@@ -23,20 +23,19 @@ export class RenderhomePage {
         const text = document.querySelector(".textoPost")
         const btnPost = document.querySelector(".buttonPostar")
 
-        btnPost.addEventListener("click",  () => {
+        btnPost.addEventListener("click", async () => {
 
             const newPost = {
                 title: postTitle.value,
                 description: text.value
             }
 
-              Api.createPost(newPost)
+              await Api.createPost(newPost)
         })
     }
 
     static logout (){
         const btnLogout = document.querySelector(".btnLogout")
-        console.log(btnLogout)
         btnLogout.addEventListener("click", (event) =>{
             event.preventDefault()
             localStorage.clear()
@@ -47,5 +46,4 @@ export class RenderhomePage {
 
 await RenderhomePage.userInfo()
 RenderhomePage.createNewPost()
-await RenderhomePage.renderHome()
 RenderhomePage.logout()

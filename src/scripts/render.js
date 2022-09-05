@@ -82,7 +82,6 @@ export class RenderPosts {
 
         li.append(tagDivImgEscrito, tagDivPostContent, tagDivButtonsPost)
 
-        console.log(li)
         return li
        
     }
