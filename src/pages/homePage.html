@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/reset.css">
+    <link rel="stylesheet" href="../styles/nav.css">
+    <link rel="stylesheet" href="../styles/input.css">
+    <link rel="stylesheet" href="../styles/button.css">
+    <link rel="stylesheet" href="../styles/modal.css">
+    <link rel="stylesheet" href="../styles/globalStyles.css">
+    <link rel="stylesheet" href="../styles/homePage.css">
+    <script defer type="module" src="../scripts/homePage.js"></script>
+    <title>Home Page</title>
+</head>
+
+<body>
+    <section class="containerModalPost hidden modal ">
+        <div>
+            <div class="imgEscritoEbutton">           
+                <div class="imgEscrito">
+                    <figure>
+                        <img src="../assets/profile.png">
+                    </figure>
+                    <div class="nomeProfissao">
+                        <h3 class="title2">Nome da Pessoa</h3>
+                        <p class="text2">Profissao</p>
+                    </div>
+                </div>
+                <button>X</button>
+            </div>
+            <div class="containerModalPost__escritoPost">
+                <h2 class="title1">Titulo</h2>
+                <p class="text1">EscritoPost</p>
+            </div>
+        </div>
+    </section>
+    <header>
+        <nav>
+            <h2 class="text1">TechPosters</h2>
+            <div>
+                <button class="buttonNav btnLogout">Sair</button>
+            </div>
+        </nav>
+    </header>
+    <main>
+    <section class="postsESugestoes">
+        <section class="containerDigitarPost">
+            <div class="containerDigitarPost__divFigureName">
+                <figure>
+                    <img id="userImg" src="../assets/profile.png">
+                </figure>
+                <div>
+                    <h3 class="title2" id="userName">Nome de Perfil</h3>
+                    <p id="userWork" class="text2">Profissao</p>
+                </div>
+                <p id="userFollowers" class="containerDigitarPost__seguidores">Numero de seguidores</p>
+            </div>
+            <div class="containerDigitarPost__divText">
+                <input class="input1 tituloPost" type="text" placeholder="Digitar título do post">
+                <input class="input2 textoPost" type="text" placeholder="Digitar descrição do post">
+                <button class="button2Disable buttonPostar">Postar</button>
+            </div>
+        </section>
+        <section class="containerSugestoes">
+            <h3 class="title2">Sugestões para você seguir</h3>
+            <ul class="containerSugestoes__ul">
+                <li>
+                    <div>
+                        <figure>
+                            <img src="../assets/profile.png">
+                        </figure>
+                        <div>
+                            <h2 class="title2">Nome da pessoa</h2>
+                            <p class="text2">Profissao</p>
+                        </div>
+                    </div>
+                    <button class="buttonSeguir">Seguir</button>
+                    <button class="buttonSeguindo hidden">Seguindo</button>
+                </li>
+            </ul>
+        </section>
+    </section>
+        
+        <section class="containerPosts">
+            <h2 class="title1">Posts</h2>
+            <ul class="containerPosts__ul">
+                <li>
+                    <div class="containerPosts__ul__imgEscrito">
+                        <figure>
+                            <img src="../assets/profile.png">
+                        </figure>
+                        <div>
+                            <h2 class="title2">Nome da pessoa</h2>
+                            <p class="text2">Profissao</p>
+                        </div>
+                    </div>
+                    <div class="postContent">
+                        <h3 class="title1">Título do Post</h3>
+                        <p class="text1">Conteúdo</p>
+                    </div>
+                    <div class="buttonsPost">
+                        <button class="buttonAbrirPost">Abrir Post</button>
+                        <div class="containerLike">
+                            <button class="buttonLike"><img src="../assets/heartBlack.png"></button>
+                            <button class="buttonLike hidden"><img src="../assets/heartRed.png"></button>
+                            <p>23</p>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="containerPosts__ul__imgEscrito">
+                        <figure>
+                            <img src="../assets/profile.png">
+                        </figure>
+                        <div>
+                            <h2 class="title2">Nome da pessoa</h2>
+                            <p class="text2">Profissao</p>
+                        </div>
+                    </div>
+                    <div class="postContent">
+                        <h3 class="title1">Título do Post</h3>
+                        <p class="text1">Conteúdo</p>
+                    </div>
+                    <div class="buttonsPost">
+                        <button class="buttonAbrirPost">Abrir Post</button>
+                        <div class="containerLike">
+                            <button class="buttonLike"><img src="../assets/heartBlack.png"></button>
+                            <button class="buttonLike hidden"><img src="../assets/heartRed.png"></button>
+                            <p>23</p>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="containerPosts__ul__imgEscrito">
+                        <figure>
+                            <img src="../assets/profile.png">
+                        </figure>
+                        <div>
+                            <h2 class="title2">Nome da pessoa</h2>
+                            <p class="text2">Profissao</p>
+                        </div>
+                    </div>
+                    <div class="postContent">
+                        <h3 class="title1">Título do Post</h3>
+                        <p class="text1">Conteúdo</p>
+                    </div>
+                    <div class="buttonsPost">
+                        <button class="buttonAbrirPost">Abrir Post</button>
+                        <div class="containerLike">
+                            <button class="buttonLike"><img src="../assets/heartBlack.png"></button>
+                            <button class="buttonLike hidden"><img src="../assets/heartRed.png"></button>
+                            <p>23</p>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </section>
+    </main>
+</body>
+
+</html>
