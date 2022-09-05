@@ -34,7 +34,7 @@ export class Api {
             .then(res => {
                 localStorage.setItem("S6-19: userId", res.user_uuid)
                 localStorage.setItem("S6-19: token", res.token || '')
-                window.location.assign("src/pages/homePage.html")
+                // window.location.assign("src/pages/homePage.html")
                 return res
             })
 

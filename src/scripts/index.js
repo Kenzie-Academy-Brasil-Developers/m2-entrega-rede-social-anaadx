@@ -19,9 +19,9 @@ class LoginPage {
                 email: emailInput.value,
                 password: passwordInput.value
             }
-            await Api.login(data)
+            const resultadoApi = await Api.login(data)
 
-            if(token) {
+            if(resultadoApi.token) {
                 window.location.assign("src/pages/homePage.html")
             }else{
                 modal.classList.toggle('hidden')

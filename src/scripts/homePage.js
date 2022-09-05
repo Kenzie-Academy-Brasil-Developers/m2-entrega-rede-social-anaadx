@@ -1,9 +1,7 @@
 import {
     Api
 } from "./models/api.js";
-// import {
-//     RenderPosts
-// } from "./models/render.js";
+
 
 export class RenderhomePage {
 
@@ -36,21 +34,6 @@ export class RenderhomePage {
         })
     }
 
-    // static async renderHome () {
-    //     const token = localStorage.getItem("S6-19: token")
-    //     const postsList = document.querySelector(".containerPosts__ul")
-    //     let cont = 1
-    //     const posts = await Api.getPosts(`${cont}`)
-
-    //     postsList.innerHTML = ''
-
-    //     if(!token) {
-    //         window.location.assign("../../index.html")
-    //     }
-
-    //     RenderPosts.renderPostsList(posts)
-    // }
-
     static logout (){
         const btnLogout = document.querySelector(".btnLogout")
         console.log(btnLogout)
@@ -64,5 +47,5 @@ export class RenderhomePage {
 
 await RenderhomePage.userInfo()
 RenderhomePage.createNewPost()
-// await RenderhomePage.renderHome()
+await RenderhomePage.renderHome()
 RenderhomePage.logout()
