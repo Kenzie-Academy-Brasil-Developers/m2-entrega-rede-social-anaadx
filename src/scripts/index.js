@@ -10,7 +10,6 @@ class LoginPage {
         const btnRegisterPage = document.querySelector(".btnRegisterPage")
         const btnRegisterPage2 = document.querySelector(".btnRegisterPage2")
         const btnCloseModal = document.querySelector(".closeModal")
-        const token = localStorage.getItem("S5-19: token")
         const modal = document.querySelector(".modal")
 
         btnLogin.addEventListener("click", async (event) => {

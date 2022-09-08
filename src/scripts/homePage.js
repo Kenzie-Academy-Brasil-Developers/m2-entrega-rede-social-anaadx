@@ -5,6 +5,14 @@ import {
 
 export class RenderhomePage {
 
+    static async acessControl(){
+        const token = localStorage.getItem("S6-19: token")
+
+            if(!token) {
+                window.location.assign("../../index.html")
+    }
+}
+
     static async userInfo() {
         const userImg = document.getElementById("userImg")
         const userName = document.getElementById("userName")
@@ -30,7 +38,8 @@ export class RenderhomePage {
                 description: text.value
             }
 
-              await Api.createPost(newPost)
+              const novaPostagem = await Api.createPost(newPost)
+              console.log(novaPostagem)
         })
     }
 
@@ -40,10 +49,56 @@ export class RenderhomePage {
             event.preventDefault()
             localStorage.clear()
             window.location.assign("../../index.html")
-        })
+        })     
     }
-}
 
+
+  
+    static async like(){
+        
+            document.addEventListener("click", async (event) => {
+                event.preventDefault()
+                const target = event.target
+                
+                if (target.classList == "buttonLikeImg"){
+                    const IdPost = {
+                        "post_uuid": target.id 
+                    }
+                     await Api.likePost(IdPost)
+                    
+                }
+            })
+           
+    }
+
+    static async follow(){
+        
+            document.addEventListener("click", async (event) => {
+                event.preventDefault()
+                const target = event.target
+                
+                
+                if (target.classList == "buttonSeguir"){
+                    const IdUser = {
+                        "following_users_uuid": target.id 
+                    }
+                     await Api.followUser(IdUser)
+                    
+                }
+            }) 
+           
+    }
+
+        
+    }
+
+
+await RenderhomePage.acessControl()
 await RenderhomePage.userInfo()
 RenderhomePage.createNewPost()
 RenderhomePage.logout()
+await RenderhomePage.like()
+await RenderhomePage.follow()
+
+
+
