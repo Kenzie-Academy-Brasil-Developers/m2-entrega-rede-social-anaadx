@@ -1,5 +1,5 @@
 export class Api {
-    static baseUrl = "http://m2-rede-social.herokuapp.com/api/"
+    static baseUrl = "https://m2-rede-social.herokuapp.com/api/"
     static token = localStorage.getItem("S6-19: token")
     static headers = {
         "Content-Type": "application/json",
